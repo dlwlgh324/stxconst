@@ -16,17 +16,34 @@
     <!-- normalize -: css 초기화 -->
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="js/script.js"></script>
 </head>
 
 <body>
     <div class="wrap">
+        <!-- 모달창 -->
+        <div class="modal">
+            <div class="modal-cont">
+                <button class="modal-close">
+                    close
+                </button>
+                <a href="#" class="modal-show">
+                    본 페이지는 크롬에 최적화되어있습니다.</a>
+            </div>
+        </div>
         <!-- 상단영역 -->
         <header class="header">
             <div class="container">
                 <a href="index.html" class="logo">STX 건설</a>
                 <!-- 주메뉴 -->
-                <div class="gnb">
-                </div>
+                <ul class="main-menu clearfix">
+                    <li><a href="#">회사소개</a></li>
+                    <li><a href="#">사업분야</a></li>
+                    <li><a href="#">사회공헌</a></li>
+                    <li><a href="#">홍보센터</a></li>
+                    <li><a href="#">고객지원</a></li>
+                    <li><a href="#">채용정보</a></li>
+                </ul>
                 <!-- //주메뉴 -->
                 <!-- 언어메뉴 -->
                 <div class="language">
@@ -37,6 +54,60 @@
                 </div>
                 <!-- //언어메뉴 -->
             </div>
+            <!-- 서브메뉴 -->
+            <div class="sub-menu">
+                <ul class="sub-box clearfix">
+                    <li>
+                        <ul class="sub-list">
+                            <li><a href="#">인사말</a></li>
+                            <li><a href="#">STX건설</a></li>
+                            <li><a href="#">기업문화</a></li>
+                            <li><a href="#">STX건설연혁</a></li>
+                            <li><a href="#">조직안내</a></li>
+                            <li><a href="#">윤리경영</a></li>
+                            <li><a href="#">안전·환경·품질경영</a></li>
+                            <li><a href="#">찾아오시는길</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul class="sub-list">
+                            <li><a href="#">건축사업</a></li>
+                            <li><a href="#">주택사업</a></li>
+                            <li><a href="#">토목사업</a></li>
+                            <li><a href="#">플랜트/공작기계사업</a></li>
+                            <li><a href="#">해외사업</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul class="sub-list">
+                            <li><a href="#">나눔의생각</a></li>
+                            <li><a href="#">주요활동분야</a></li>
+                            <li><a href="#">활동현황</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul class="sub-list">
+                            <li><a href="#">홍보동영상</a></li>
+                            <li><a href="#">홍보브로슈어</a></li>
+                            <li><a href="#">STX건설뉴스</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul class="sub-list">
+                            <li><a href="#">자주묻는질문</a></li>
+                            <li><a href="#">고객문의</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul class="sub-list">
+                            <li><a href="#">채용안내</a></li>
+                            <li><a href="#">채용공고</a></li>
+                            <li><a href="#">채용FAQ</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!-- //서브메뉴 -->
         </header>
         <!-- 비주얼영역 -->
         <section class="visual">
@@ -245,9 +316,9 @@
                 </div>
                 <div class="f-copy">
                     <address class="address">
-                        부산사무소 : (48059) 부산 해운대구 센텀동로 49(우동) 아이피파빌리온 8층 · TEL : 051-791-3000  · FAX : 051-791-3099
+                        부산사무소 : (48059) 부산 해운대구 센텀동로 49(우동) 아이피파빌리온 8층 · TEL : 051-791-3000 · FAX : 051-791-3099
                         <br>
-                        창원사무소 : (51494) 경상남도 창원시 성산구 중앙대로 84번길 3, 9층904호 · TEL : 055-263-2060  · FAX : 055-263-2087
+                        창원사무소 : (51494) 경상남도 창원시 성산구 중앙대로 84번길 3, 9층904호 · TEL : 055-263-2060 · FAX : 055-263-2087
                     </address>
                     <span class="copy">
                         Copyright ⓒ 2018 STX CONSTRUCTION. LTD. All Rights Reserved.

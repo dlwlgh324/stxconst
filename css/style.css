@@ -24,19 +24,19 @@ img {
 }
 
 html {
-    font-size: 16px;
+    font-size: 10px;
     overflow-x: hidden;
 }
 
 body {
     font-family: 'Noto Sans KR';
-    font-size: 15px;
+    font-size: 1.5rem;
     color: #444;
     letter-spacing: normal;
     line-height: 1.2;
     font-weight: 200;
-    min-width: 1200px;
-    padding-top: 73px;
+    min-width: 120rem;
+    padding-top: 7.3rem;
 }
 
 /*공통클래스*/
@@ -51,7 +51,7 @@ body {
 .container {
     position: relative;
     display: block;
-    width: 1200px;
+    width: 120rem;
     margin: 0 auto;
 }
 
@@ -60,16 +60,69 @@ body {
     display: block;
 }
 
+/* 모달창 */
+.modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 99999;
+}
+
+.modal-cont {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 35rem;
+    height: 12rem;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.5rem;
+}
+
+.modal-close {
+    position: absolute;
+    right: 1rem;
+    bottom: 1rem;
+    width: 4.5rem;
+    height: 2rem;
+    background-color: #fff;
+    color: rgb(111, 35, 249);
+    font-size: 1rem;
+    font-weight: 300;
+    cursor: pointer;
+    border: 0.1rem solid rgb(111, 35, 249);
+    border-radius: 0.2rem;
+    transition: all 0.2s;
+}
+
+.modal-close:hover {
+    color: #fff;
+    background-color: rgb(111, 35, 249);
+}
+
+.modal-show {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #222;
+    text-align: center;
+    line-height: 2;
+}
+
+
 /*상단영역*/
 .header {
     position: fixed;
-    
     left: 0;
     top: 0;
     display: block;
     width: 100%;
-    height: 73px;
-    
+    height: 7.3rem;
     z-index: 999;
     background: #fff;
     border-bottom: 1px solid #e9e9e9;
@@ -78,33 +131,79 @@ body {
 }
 
 .header>.container {
-    height: 73px;
+    height: 7.3rem;
 }
 
 .logo {
     position: absolute;
-    left: -275px;
-    top: 21px;
+    left: -26rem;
+    top: 50%;
+    transform: translateY(-50%);
     display: block;
-    width: 152px;
-    height: 34px;
-    background: url(../images/logo.png) no-repeat center;
-    font-size: 0px;
-
+    width: 15.2rem;
+    height: 3.4rem;
+    background: url('../images/logo.png') no-repeat center;
+    font-size: 0;
 }
 
-
-.gnb {
+.main-menu {
     position: absolute;
-    left: 0;
-    top: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     display: block;
+    width: 90rem;
 }
+
+.main-menu>li {
+    float: left;
+    width: 15rem;
+}
+
+.main-menu>li>a {
+    font-size: 1.9rem;
+    color: #000;
+    font-weight: 500;
+}
+
+.main-menu>li>a:hover {
+    color: #ed1c24;
+}
+
+.sub-menu {
+    position: relative;
+    display: none;
+    width: 100%;
+    background-color: rgb(0 0 0 / 60%);
+    padding: 3rem 0;
+}
+
+.sub-box {
+    width: 90rem;
+    margin: 0 auto;
+}
+
+.sub-box>li {
+    float: left;
+    width: 15rem;
+}
+
+.sub-list>li {
+    padding: 1rem 0;
+}
+
+.sub-list>li>a {
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+
 
 .language {
     position: absolute;
-    right: -270px;
-    top: 32px;
+    right: -24rem;
+    top: 50%;
+    transform: translateY(-50%);
     display: block;
 }
 
@@ -126,17 +225,17 @@ body {
     font-weight: 500;
     line-height: 1;
     text-transform: uppercase;
-    padding: 0 10px;
+    padding: 0 1rem;
 }
 
 .language-list>li>a::after {
     content: '';
     position: absolute;
     right: 0;
-    top: 3px;
+    top: 0.3rem;
     display: block;
-    width: 1px;
-    height: 9px;
+    width: 0.1rem;
+    height: 0.9rem;
     background: #999;
 }
 
@@ -152,14 +251,14 @@ body {
 .visual {
     position: relative;
     display: block;
-    height: 910px;
-    background: url(../images/img_visual.png) no-repeat center;
+    height: 91rem;
+    background: url('../images/img_visual.png') no-repeat center;
     background-size: cover;
     background-attachment: fixed;
 }
 
 .visual>.container {
-    padding-top: 180px;
+    padding-top: 18rem;
     height: 100%;
 }
 
@@ -168,8 +267,8 @@ body {
     position: absolute;
     left: 0;
     top: 0;
-    width: 60px;
-    height: 5px;
+    width: 6rem;
+    height: 0.5rem;
     background: #ec1c24;
 }
 
@@ -177,10 +276,10 @@ body {
     position: relative;
     display: block;
     color: #fff;
-    font-size: 70px;
+    font-size: 7rem;
     font-weight: 500;
     line-height: 1.1;
-    padding-top: 60px;
+    padding-top: 6rem;
 
 }
 
@@ -188,22 +287,22 @@ body {
     position: relative;
     display: block;
     color: #fff;
-    font-size: 21px;
+    font-size: 2.1rem;
     font-weight: 200;
-    padding-top: 50px;
+    padding-top: 5rem;
 }
 
 .icon-move {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    bottom: 40px;
+    bottom: 4rem;
     display: block;
-    width: 33px;
-    height: 33px;
-    background: url(../images/bg_common.png) no-repeat center;
-    background-position-x: -122px;
-    background-position-y: 0px;
+    width: 3.3rem;
+    height: 3.3rem;
+    background: url('../images/bg_common.png') no-repeat center;
+    background-position-x: -12.2rem;
+    background-position-y: 0;
 }
 
 /*업무파트*/
@@ -211,8 +310,8 @@ body {
     position: relative;
     display: block;
     background: #f8f8f8;
-    padding-top: 115px;
-    padding-bottom: 133px;
+    padding-top: 11.5rem;
+    padding-bottom: 13.3rem;
 }
 
 .part>.container {}
@@ -220,7 +319,7 @@ body {
 .section-head {
     position: relative;
     display: block;
-    margin-bottom: 70px;
+    margin-bottom: 7rem;
 }
 
 .section-tit {
@@ -231,7 +330,7 @@ body {
     text-align: center;
     font-weight: 600;
     line-height: 1;
-    padding-bottom: 35px;
+    padding-bottom: 3.5rem;
 
 }
 
@@ -242,8 +341,8 @@ body {
     transform: translateX(-50%);
     bottom: 0;
     display: block;
-    width: 37px;
-    height: 4px;
+    width: 3.7rem;
+    height: 0.4rem;
     background: #f00;
 }
 
@@ -251,12 +350,12 @@ body {
 .section-desc {
     position: relative;
     display: block;
-    font-size: 16px;
+    font-size: 1.6rem;
     color: #444;
     text-align: center;
     font-weight: 200;
     line-height: 1.4;
-    padding-top: 30px;
+    padding-top: 3rem;
 }
 
 .part-main {
@@ -267,7 +366,7 @@ body {
 .part-main-list {
     position: relative;
     display: block;
-    background: url(../images/img_business.png) no-repeat center;
+    background: url('../images/img_business.png') no-repeat center;
 }
 
 .part-main-list>li {
@@ -275,7 +374,7 @@ body {
     display: block;
     float: left;
     width: 20%;
-    height: 420px;
+    height: 42rem;
 }
 
 .part-main-list>li>a {
@@ -284,10 +383,10 @@ body {
     width: 100%;
     height: 100%;
     transition: background 0.5s;
-    padding-top: 100px;
+    padding-top: 10rem;
     text-align: center;
     color: #fff;
-    font-size: 24px;
+    font-size: 2.4rem;
     font-weight: 200;
     line-height: 1;
 }
@@ -301,7 +400,7 @@ body {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    top: 215px;
+    top: 21.5rem;
     display: block;
     background: url('../images/bg_common.png') no-repeat;
 
@@ -316,35 +415,35 @@ body {
 }
 
 .part-icon-1 {
-    width: 123px;
-    height: 112px;
+    width: 12.3rem;
+    height: 11.2rem;
     background-position: -168px 0px;
 
 }
 
 .part-icon-2 {
-    width: 123px;
-    height: 112px;
+    width: 12.3rem;
+    height: 11.2rem;
     background-position: -301px 0px;
 }
 
 .part-icon-3 {
-    width: 130px;
-    height: 106px;
+    width: 13rem;
+    height: 10.6rem;
     background-position: 0px -122px;
 }
 
 .part-icon-4 {
-    top: 205px;
-    width: 130px;
-    height: 111px;
+    top: 20.5rem;
+    width: 13rem;
+    height: 11.1rem;
     background-position: -140px -122px;
 }
 
 .part-icon-5 {
-    top: 226px;
-    width: 102px;
-    height: 105px;
+    top: 22.6rem;
+    width: 10.2rem;
+    height: 10.5rem;
     background-position: -280px -122px;
 }
 
@@ -353,7 +452,7 @@ body {
     position: relative;
     display: block;
 
-    padding: 50px 0;
+    padding: 5rem 0;
 
 
     /*background: url('../images/bar.png') repeat-y center;*/
@@ -383,24 +482,24 @@ body {
     position: relative;
     display: table-cell;
     width: 50%;
-    padding-right: 110px;
+    padding-right: 11rem;
 }
 
 .news-right {
     position: relative;
     display: table-cell;
     width: 50%;
-    padding-left: 110px;
+    padding-left: 11rem;
 }
 
 .news-tit {
     position: relative;
     display: block;
     color: #fff;
-    font-size: 32px;
+    font-size: 3.2rem;
     font-weight: 400;
     line-height: 1;
-    padding-bottom: 45px;
+    padding-bottom: 4.5rem;
 }
 
 .notice-list,
@@ -413,7 +512,7 @@ body {
 .news-list>li {
     position: relative;
     display: block;
-    padding: 25px 0;
+    padding: 2.5rem 0;
     border-top: 1px solid rgba(255, 255, 255, 0.5);
 }
 
@@ -427,7 +526,7 @@ body {
     position: relative;
     display: block;
     color: #fff;
-    font-size: 16px;
+    font-size: 1.6rem;
     font-weight: 200;
     line-height: 1;
 
@@ -438,26 +537,26 @@ body {
     position: relative;
     display: block;
     float: left;
-    line-height: 23px;
+    line-height: 2.3rem;
 
-    width: 390px;
+    width: 39rem;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 }
 
 .news-more {
-    relative;
+    position: relative;
     display: block;
     float: right;
-    padding-right: 27px;
+    padding-right: 2.7rem;
 }
 
 .i-arrow {
     position: relative;
     display: block;
-    width: 48px;
-    height: 23px;
+    width: 4.8rem;
+    height: 2.3rem;
     background: url('../images/bg_common.png') no-repeat;
     background-position: 0 -49px;
 
@@ -468,8 +567,8 @@ body {
     position: relative;
     display: block;
     background: #f7f7f7;
-    padding-top: 60px;
-    padding-bottom: 100px;
+    padding-top: 6rem;
+    padding-bottom: 10rem;
 }
 
 .service>.container {
@@ -482,7 +581,7 @@ body {
     display: table-cell;
     width: 50%;
     background: #fefefe;
-    padding: 50px 50px 50px 55px;
+    padding: 5rem 5rem 5rem 5.5rem;
     border-right: 1px solid #f7f7f7;
 }
 
@@ -491,7 +590,7 @@ body {
     position: relative;
     display: block;
     float: left;
-    width: 290px;
+    width: 29rem;
 }
 
 .service-link {
@@ -502,18 +601,18 @@ body {
 .service-tit {
     position: relative;
     display: block;
-    font-size: 30px;
+    font-size: 3rem;
     color: #000;
     line-height: 1;
     font-weight: 500;
     text-transform: uppercase;
-    margin-bottom: 25px;
+    margin-bottom: 2.5rem;
 }
 
 .service-desc {
     position: relative;
     display: block;
-    font-size: 16px;
+    font-size: 1.6rem;
     color: #444;
     font-weight: 200;
     line-height: 1.2;
@@ -523,7 +622,7 @@ body {
     position: relative;
     display: block;
     float: right;
-    height: 90px;
+    height: 9rem;
 }
 
 .service-img>img {
@@ -538,7 +637,7 @@ body {
     display: table-cell;
     width: 50%;
     background: #fefefe;
-    padding: 50px 55px 50px 50px;
+    padding: 5rem 5.5rem 5rem 5rem;
     border-left: 1px solid #f7f7f7;
 }
 
@@ -548,7 +647,7 @@ body {
     position: relative;
     display: block;
     background: #fefefe;
-    padding: 100px 0;
+    padding: 10rem 0;
 }
 
 .about-top {
@@ -573,44 +672,44 @@ body {
 .about-tit {
     position: relative;
     display: block;
-    font-size: 44px;
+    font-size: 4.4rem;
     font-weight: 600;
     color: #111;
     line-height: 1;
     text-transform: uppercase;
-    margin-bottom: 55px;
+    margin-bottom: 5.5rem;
 }
 
 .about-desc-1 {
     position: relative;
     display: block;
-    font-size: 21px;
+    font-size: 2.1rem;
     font-weight: 500;
     color: #111;
     line-height: 1.4;
-    margin-bottom: 25px;
-    padding-left: 100px;
+    margin-bottom: 2.5rem;
+    padding-left: 10rem;
 }
 
 .about-desc-1:before {
     content: '';
     position: absolute;
-    top: 14px;
+    top: 1.4rem;
     left: 0;
     display: block;
-    width: 37px;
-    height: 5px;
+    width: 3.7rem;
+    height: 0.5rem;
     background: #ec1c24;
 }
 
 .about-desc-2 {
     position: relative;
     display: block;
-    font-size: 15px;
+    font-size: 1.5rem;
     color: #444;
     font-weight: 200;
     line-height: 1.4;
-    padding-left: 100px;
+    padding-left: 10rem;
 }
 
 
@@ -626,35 +725,35 @@ body {
     text-align: center;
     font-size: 0;
 
-    padding-top: 80px;
+    padding-top: 8rem;
 }
 
 .about-link {
     position: relative;
     display: inline-block;
-    font-size: 21px;
+    font-size: 2.1rem;
     color: #222;
     font-weight: 500;
     line-height: 1;
 
-    height: 160px;
-    background: url(../images/bg_icon.png) no-repeat center;
-    padding-top: 135px;
+    height: 16rem;
+    background: url('../images/bg_icon.png') no-repeat center;
+    padding-top: 13.5rem;
 }
 
 .about-link-1 {
-    width: 100px;
+    width: 10rem;
     background-position: 0px 0px;
 }
 
 .about-link-2 {
-    width: 95px;
+    width: 9.5rem;
     background-position: -120px -5px;
-    margin: 0 210px;
+    margin: 0 21rem;
 }
 
 .about-link-3 {
-    width: 105px;
+    width: 10.5rem;
     background-position: -235px 0px;
 }
 
@@ -663,7 +762,7 @@ body {
     position: relative;
     display: block;
     background: #4e4e4e;
-    padding: 50px 0;
+    padding: 5rem 0;
 }
 
 .footer>.container {
@@ -675,7 +774,7 @@ body {
     position: relative;
     display: block;
     float: left;
-    width: 255px;
+    width: 25.5rem;
 
 }
 
@@ -689,7 +788,7 @@ body {
 .copy {
     position: relative;
     display: block;
-    font-size: 13px;
+    font-size: 1.3rem;
     font-weight: 200;
     color: #c3c3c3;
     line-height: 1.7;
