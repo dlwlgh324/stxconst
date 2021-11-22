@@ -43,7 +43,7 @@ $(document).ready(function () {
 
     main_menu.mouseleave(function () {
         clearTimeout(menu_timer);
-        menu_timer = setTimeout(late, 800);
+        menu_timer = setTimeout(late, 500);
     });
 
     sub_menu.mouseenter(function () {
