@@ -28,7 +28,7 @@ $(document).ready(function () {
 
     //주메뉴, 서브메뉴세팅
 
-    let main_menu = $('.main-menu>li');
+    let main_menu = $('.main-menu');
     let sub_menu = $('.sub-menu');
     let menu_timer;
 
@@ -43,7 +43,7 @@ $(document).ready(function () {
 
     main_menu.mouseleave(function () {
         clearTimeout(menu_timer);
-        menu_timer = setTimeout(late, 300);
+        menu_timer = setTimeout(late, 800);
     });
 
     sub_menu.mouseenter(function () {
