@@ -27,23 +27,26 @@ $(document).ready(function () {
     });
 
     //주메뉴, 서브메뉴세팅
-
     let main_menu = $('.main-menu');
     let sub_menu = $('.sub-menu');
     let menu_timer;
 
+    //포커스유지
+    let sub_box_li = $('.sub-box>li');
+    let main_menu_a = $('.main-menu>li>a');
+
     function late() {
-        sub_menu.stop().slideUp('fast');
+        sub_menu.removeClass('sub-menu-active');
     }
 
     main_menu.mouseenter(function () {
         clearTimeout(menu_timer);
-        sub_menu.stop().slideDown('fast');
+        sub_menu.addClass('sub-menu-active');
     });
 
     main_menu.mouseleave(function () {
         clearTimeout(menu_timer);
-        menu_timer = setTimeout(late, 500);
+        menu_timer = setTimeout(late, 300);
     });
 
     sub_menu.mouseenter(function () {
@@ -52,7 +55,18 @@ $(document).ready(function () {
 
     sub_menu.mouseleave(function () {
         clearTimeout(menu_timer);
-        sub_menu.stop().slideUp('fast');
+        sub_menu.removeClass('sub-menu-active');
+    });
+
+    // 주메뉴 포커스 유지
+    $.each(sub_box_li, function (index, item) {
+        sub_box_li.eq(index).mouseenter(function () {
+            main_menu_a.removeClass('main-menu-active');
+            main_menu_a.eq(index).addClass('main-menu-active');
+        });
+        sub_box_li.eq(index).mouseleave(function () {
+            main_menu_a.removeClass('main-menu-active');
+        });
     });
 
 });
