@@ -143,6 +143,7 @@ body {
     height: 3.4rem;
     background: url('../images/logo.png') no-repeat center;
     font-size: 0;
+    z-index: 9;
 }
 
 .language {
@@ -151,6 +152,7 @@ body {
     top: 50%;
     transform: translateY(-50%);
     display: block;
+    z-index: 9;
 }
 
 .language-list {
