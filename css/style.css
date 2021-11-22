@@ -204,9 +204,8 @@ body {
 
 .gnb {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
 }
@@ -215,6 +214,7 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
+    width: 90rem;
     transform: translate(-50%, -50%);
     display: block;
 }
@@ -255,8 +255,11 @@ body {
 }
 
 .sub-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
     width: 90rem;
-    margin: 0 auto;
 }
 
 .sub-box>li {
